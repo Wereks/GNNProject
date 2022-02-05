@@ -13,7 +13,7 @@ from torch.utils.tensorboard import SummaryWriter
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from sklearn.metrics import roc_auc_score, mean_squared_error, mean_absolute_error
 
-from .dataset.dataset_test import MolTestDatasetWrapper, MolTestDataset
+from dataset.dataset_test import MolTestDatasetWrapper, MolTestDataset
 
 
 def _save_config_file(model_checkpoints_folder):
@@ -142,7 +142,7 @@ class FineTune(object):
 
                 if n_iter % self.config['log_every_n_steps'] == 0:
                     self.writer.add_scalar('train_loss', loss, global_step=n_iter)
-                    print(epoch_counter, bn, loss.item())
+                    print('Epoch: ', epoch_counter, bn, loss.item())
 
                 loss.backward()
 
