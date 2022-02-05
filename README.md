@@ -5,3 +5,5 @@ https://docs.google.com/presentation/d/1yczNxMM77mEV7SAIbwd1znQ8j_frjT5YWEta2ZET
 
 To run it you need to create a conda env with the requirements file.
 After that you can just run main.py, which will be finished in a few minutes.
+
+The MolCLR is basically the one available on https://github.com/yuyangw/MolCLR but changed to suit our needs.
